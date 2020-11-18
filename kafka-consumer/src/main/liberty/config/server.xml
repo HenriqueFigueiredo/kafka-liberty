@@ -1,0 +1,20 @@
+<server description="kafka-liberty-consumer-javaee">
+
+	<featureManager>
+			<feature>beanValidation-2.0</feature>
+	        <feature>jaxrs-2.1</feature>
+	        <feature>cdi-2.0</feature>
+	        <feature>mpConfig-1.4</feature>
+	        <feature>mpHealth-1.0</feature>
+	</featureManager>
+
+	<classloading useJarUrls="true"/>
+
+	<mpMetrics authentication="false"/>
+
+	<httpEndpoint httpPort="${default.http.port}" httpsPort="-1"
+				  id="defaultHttpEndpoint" host="*" />
+
+	<webApplication location="kafka-consumer.war" contextRoot="/"/>
+
+</server>
