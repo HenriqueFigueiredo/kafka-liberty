@@ -62,9 +62,6 @@
                 <version>3.2</version>
                 <configuration>
                     <serverName>${server.name}</serverName>
-                    <bootstrapProperties>
-                        <default.http.port>${default.http.port}</default.http.port>
-                    </bootstrapProperties>
                 </configuration>
             </plugin>
             <plugin>

@@ -67,8 +67,6 @@
 
     <build>
         <finalName>${project.artifactId}</finalName>
-        <!--foi necessario setar o diretorio de build por que em casos em que subiamos mais de uma instancia do server eram lancados alguns erros-->
-        <directory>target/${temperature.name}</directory>
         <plugins>
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
@@ -76,11 +74,6 @@
                 <version>3.2</version>
                 <configuration>
                     <serverName>KafkaConsumserServer</serverName>
-                    <bootstrapProperties>
-                        <default.http.port>${default.http.port}</default.http.port>
-                        <temperature.name>${temperature.name}</temperature.name>
-                        <kelvin.diff>${kelvin.diff}</kelvin.diff>
-                    </bootstrapProperties>
                 </configuration>
             </plugin>
             <plugin>
